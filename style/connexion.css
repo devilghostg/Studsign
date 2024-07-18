@@ -1,0 +1,155 @@
+/* Vos styles existants */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/* header  */
+header{
+    width: 100%;
+}
+nav a{
+    background-color: #225A76;
+    padding: 5px ;
+    color: white;
+}
+/* main  */
+main {
+    background-image: url(../public/fond.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    margin: auto;
+}
+
+/* Partie footer */
+footer, a {
+    background-color: #022333;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 150px;
+}
+
+/* Nouveau CSS pour le formulaire centré */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    width: 800px;
+    max-width: 90%;
+    background-color: #ffffffcc;
+    backdrop-filter: blur(4px);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-box, .form-container {
+    width: 50%;
+    transition: transform 0.3s ease;
+}
+
+.info-box {
+    background-color: #022333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.info-box h2, .form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-container button[type="submit"] {
+    padding: 10px;
+    background-color: #1FCEAE;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #1FCEAE;
+}
+
+/* Styles pour l'animation de changement */
+.form.signup-active .info-box {
+    transform: translateX(100%);
+}
+
+.form.signup-active .form-container {
+    transform: translateX(-100%);
+}
+
+/* Animation pour les boutons */
+div > .btn{
+    display: flex;
+}
+.btn button {
+    width: 50%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn button.active {
+    background-color: #1FCEAE;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+form {
+    display: none;
+}
+
+form.active {
+    display: flex;
+    flex-direction: column;
+}
