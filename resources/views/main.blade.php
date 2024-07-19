@@ -33,7 +33,7 @@
                 <div><h1>Student</h1></div>
                 <div class="article">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ducimus harum aperiam repellendus voluptatum sequi, saepe voluptas error dicta ab corrupti labore, nostrum natus est ipsa assumenda fuga nesciunt nihil.</p>
-                    <form action="login/login_student.php">
+                    <form action="{{ route('student') }}">
                         <button class="btn-79"><span>Se connecter</span></button>
                     </form>
                 </div>
