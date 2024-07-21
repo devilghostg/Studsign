@@ -18,3 +18,16 @@ function showForm(formId) {
         formElement.classList.remove('signup-active');
     }
 }
+
+$(document).ready(function() {
+    // Show the success message
+    var successMessage = $('#success-message');
+    if (successMessage.length) {
+        successMessage.addClass('show');
+        // Hide the message after 5 seconds
+        setTimeout(function() {
+            successMessage.removeClass('show');
+        }, 5000);
+    }
+});
+
