@@ -14,7 +14,7 @@ nav a{
 }
 /* main  */
 main {
-    background-image: url(../public/fond.jpg);
+    background-image: url(../fond.jpg);
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -152,4 +152,74 @@ form {
 form.active {
     display: flex;
     flex-direction: column;
+}
+
+/* styles.css */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.alert li {
+    margin: 0;
+}
+
+
+/* message enregistrement  */
+
+.alert-success {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+}
+
+/* Animation for the alert */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.alert-success.show {
+    display: block;
+    animation: slideIn 0.5s forwards;
+}
+
+.alert-success.show {
+    display: block;
+    animation: slideIn 0.5s forwards;
+}
+
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin: 10px 0;
 }
