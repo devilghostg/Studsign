@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -11,12 +10,16 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
+        // Valider les données de la requête
         $this->validator($request->all())->validate();
 
+        // Tentative de connexion
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('main'); // Redirige vers la page principale ou une autre route
+            // Redirection en cas de succès
+            return redirect()->route('main');
         }
 
+        // Retourner avec des erreurs si la connexion échoue
         return back()->withErrors([
             'email' => 'Les informations d\'identification fournies ne correspondent pas à nos dossiers.',
         ]);
@@ -30,4 +33,3 @@ class LoginController extends Controller
         ]);
     }
 }
-

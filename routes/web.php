@@ -10,7 +10,7 @@ Route::get('/', function () {
 })->name('main');
 
 // Route pour afficher les formulaires de connexion et d'inscription
-Route::get('auth', function() {
+Route::get('auth', function () {
     return view('auth.auth'); // Assurez-vous que 'auth.auth' correspond au bon fichier de vue
 })->name('auth');
 
