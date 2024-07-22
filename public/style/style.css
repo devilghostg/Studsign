@@ -1,77 +1,94 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
+
 /* header  */
-header{
-    width: 100%;
+header {
+  width: 100%;
 }
-nav, h2{
-    background-color: #225A76;
-    padding: 5px ;
-    color: white;
+
+nav,
+h2 {
+  background-color: #225A76;
+  padding: 5px;
+  color: white;
 }
+
 /* main  */
+main {
+  height: 100%;
+  width: 100vw;
+  background-image: url(../fond.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .container {
-    display: flex;
-    width: 100%;
-    background: url(../fond.jpg) ;
-    background-position: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .box {
-    background-color: #225A76cc;
-    backdrop-filter: blur(4px);
-    width: 33.33%;
-    height: 100vh;
-    transition: flex-grow 0.3s, width 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+  background-color: #225A76cc;
+  backdrop-filter: blur(4px);
+  width: 33.33%;
+  height: 100%;
+  transition: flex-grow 0.3s, width 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .box:first-child {
-    background-color: #1fceaecc;
+  background-color: #1fceaecc;
 
 }
 
 .box:last-child {
-    background-color: #022333cc;
+  background-color: #022333cc;
 }
 
 .box:hover {
-    width: 90%;
+  width: 70%;
 }
 
 .container .box:not(:hover) {
-    width: 10%;
+  width: 10%;
 }
 
 /* contenue des box  */
 
-.box > div > h1{
-    font-weight: 800;
-    font-size: 4rem;
-    text-align: center;
-    width: 100%;
-    font-size: xx-large;
-    font-family: sans-serif;
-    transform: rotate(90deg);
-    transition: transform 0.3s;
-    color: white;
+.box>div>h1 {
+  font-weight: 800;
+  font-size: 4rem;
+  text-align: center;
+  width: 100%;
+  font-size: xx-large;
+  font-family: sans-serif;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+  color: white;
 }
-.box > div.article{
-    width: 100%;
-    display: none;
-    transition: display 0.3s;
+
+.box>div.article {
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  transition: height 0.3s ease, visibility 0.3s ease;
+  overflow: hidden;
 }
-.box > div >  p{
-    width: 70%;
-    font-weight: 500;
-    font-size: 1.4rem ;
-    color: white;
-    text-align: center;
+
+.box>div>p {
+  width: 70%;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
 }
+
 /* btn  */
 .btn-79,
 .btn-79 *,
@@ -82,15 +99,16 @@ nav, h2{
   border: 0 solid;
   box-sizing: border-box;
 }
+
 .btn-79 {
-  -webkit-tap-highlight-color: 
-transparent;
+  -webkit-tap-highlight-color:
+    transparent;
   -webkit-appearance: button;
-  background-color: 
-#000;
+  background-color:
+    #000;
   background-image: none;
-  color: 
-#ffffff;
+  color:
+    #ffffff;
   cursor: pointer;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
@@ -102,19 +120,24 @@ transparent;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
 }
+
 .btn-79:disabled {
   cursor: default;
 }
+
 .btn-79:-moz-focusring {
   outline: auto;
 }
+
 .btn-79 svg {
   display: block;
   vertical-align: middle;
 }
+
 .btn-79 [hidden] {
   display: none;
 }
+
 .btn-79 {
   --height: 80px;
   background: none;
@@ -128,14 +151,16 @@ transparent;
   position: relative;
   text-transform: uppercase;
 }
+
 .btn-79 span {
 
   font-weight: 900;
   mix-blend-mode: difference;
 }
+
 .btn-79:before {
-  background: 
-#fff;
+  background:
+    #fff;
   border-radius: 20px;
   content: "";
   height: calc(var(--height) / 1.7);
@@ -147,20 +172,25 @@ transparent;
   transition: 0.2s;
   width: calc(var(--height) / 1.7);
 }
+
 .btn-79:hover:before {
   left: 0;
   width: 100%;
 }
+
 /* fin btn */
-.box:hover > .article{
-    margin: 5% 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.box:hover>.article {
+  margin: 5% 0;
+  display: flex;
+  height: 550px;
+  visibility: visible;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.box:hover > div > h1{
-    transform: rotate(0deg);
+
+.box:hover>div>h1 {
+  transform: rotate(0deg);
 }
 
 /* pop up alert inscription  */
@@ -188,17 +218,18 @@ transparent;
 /* Animation pour faire disparaître le pop-up */
 @keyframes fadeOut {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
+
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
 
 
 /* footer  */
-footer, a {
+/* footer a {
     background-color: #022333;
     font-family: sans-serif;
     padding: 5px;
@@ -208,4 +239,4 @@ footer, a {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 150px;
-}
+} */
