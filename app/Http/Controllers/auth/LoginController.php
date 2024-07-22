@@ -16,7 +16,7 @@ class LoginController extends Controller
         // Tentative de connexion
         if (Auth::attempt($request->only('email', 'password'))) {
             // Redirection en cas de succès
-            return redirect()->route('main');
+            return redirect()->route('profile');
         }
 
         // Retourner avec des erreurs si la connexion échoue
@@ -31,5 +31,14 @@ class LoginController extends Controller
             'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
         ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('main');
     }
 }
